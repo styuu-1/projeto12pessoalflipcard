@@ -1,0 +1,125 @@
+/*Fonte do google - montserrat*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+    place-items: center;
+    display: grid;
+    background: linear-gradient(375deg, #4B0082, #A020F0) no-repeat fixed;
+    background-size: cover;
+}
+
+.wrapper {
+    height: 400px;
+    width: 320px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.wrapper .card {
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 0px;
+    transform: rotateY(0deg);
+    transition: 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
+    backface-visibility: hidden;
+}
+
+.wrapper:hover>.front-face {
+    transform: rotateY(180deg);
+
+}
+
+.wrapper .card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.wrapper .back-face {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: rotateY(180deg);
+}
+
+.wrapper:hover>.back-face {
+    transform: rotateY(0deg);
+
+}
+
+
+.wrapper .back-face img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(375deg, #4B0082, #A020F0);
+}
+
+.wrapper .back-face .info {
+    text-align: center;
+}
+
+.back-face .info .title {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.back-face ul {
+    display: flex;
+    list-style: none;
+}
+
+.back-face ul a {
+    display: block;
+    height: 40px;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    border: 2px solid transparent;
+    line-height: 38px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: linear-gradient(375deg, #4B0082, #A020F0);
+
+
+}
+
+.back-face ul a:hover {
+    background: none;
+    color: #4B0082;
+    border-color: #4B0082;
+
+
+}
